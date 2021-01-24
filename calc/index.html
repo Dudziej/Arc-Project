@@ -1,0 +1,151 @@
+<link rel="stylesheet" type="text/css" href="style2.css" />
+<title>Arc-Akcje</title>
+<div class="section over-hide z-bigger">
+  <input class="checkbox" type="checkbox" name="general" id="general" />
+  <label class="for-checkbox" for="general"></label>
+  <div class="background-color"></div>
+  <div class="section over-hide z-bigger">
+    <div class="container pb-5">
+      <div class="row justify-content-center pb-5">
+        <div class="col-12 pt-5">
+          <p class="mb-4 pb-2">Rynek Najpopularniejszych Akcji</p>
+        </div>
+        <div class="col-12 pb-5">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+              <a
+                href="https://pl.tradingview.com/markets/stocks-usa/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text">Rynek akcji dzisiaj</span></a
+              >
+              od TradingView
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js"
+              async
+            >
+              {
+                  "colorTheme": "dark",
+                      "dateRange": "12M",
+                          "exchange": "US",
+                              "showChart": true,
+                                  "locale": "pl",
+                                      "largeChartUrl": "",
+                                          "isTransparent": false,
+                                              "showSymbolLogo": false,
+                                                  "width": "400",
+                                                      "height": "600",
+                                                          "plotLineColorGrowing": "rgba(25, 118, 210, 1)",
+                                                              "plotLineColorFalling": "rgba(25, 118, 210, 1)",
+                                                                  "gridLineColor": "rgba(42, 46, 57, 1)",
+                                                                      "scaleFontColor": "rgba(120, 123, 134, 1)",
+                                                                          "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+                                                                              "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+                                                                                  "symbolActiveColor": "rgba(33, 150, 243, 0.12)"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+        <div class="col-12 pt-1">
+          <p class="mb-4 pb-2">Rynek Akcji</p>
+        </div>
+        <div class="col-xl-10 pb-5">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div id="tradingview_107e6"></div>
+            <div class="tradingview-widget-copyright">
+              <a
+                href="https://pl.tradingview.com/symbols/NASDAQ-AAPL/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text">AAPL wykres</span></a
+              >
+              od TradingView
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/tv.js"
+            ></script>
+            <script type="text/javascript">
+              new TradingView.widget({
+                width: 980,
+                height: 610,
+                symbol: "NASDAQ:AAPL",
+                interval: "D",
+                timezone: "Etc/UTC",
+                theme: "dark",
+                style: "1",
+                locale: "pl",
+                toolbar_bg: "#f1f3f6",
+                enable_publishing: false,
+                withdateranges: true,
+                hide_side_toolbar: false,
+                allow_symbol_change: true,
+                details: true,
+                hotlist: true,
+                container_id: "tradingview_107e6",
+              });
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+        <div class="col-12 pt-1">
+          <p class="mb-4 pb-2">Wirtualny portfel handlu akcjami</p>
+        </div>
+        <div class="col-12 pb-5">
+          <p>
+            symbol spolki :<br />
+            <select id="symbol">
+              <option value="AAPL">AAPL</option>
+              <option value="TSLA">TSLA</option>
+              <option value="BNGO">BNGO</option>
+              <option value="CCIV">CCIV</option>
+              <option value="AMC">AMC</option>
+              <option value="BB">BB</option>
+              <option value="OBSV">OBSV</option>
+              <option value="CHRA">CHRA</option>
+              <option value="DBVT">DBVT</option>
+              <option value="YTEN">YTEN</option>
+            </select>
+          </p>
+
+          <p>
+            kwota do zainwestowania(PLN): <br /><input
+              type="number"
+              id="money"
+              placeholder="100"
+            />
+          </p>
+          <p>Dzien kupna <br /><input type="date" id="date1" /></p>
+          <p>Dzien sprzedazy <br /><input type="date" id="date2" /></p>
+
+          <button onclick="CountCash();">Oblicz</button><br />
+          <div id="Result5">
+
+
+
+            <!-- THESE LINES ARE FOR THE RESULTS OF CALCULATOR  -->
+            <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+            <p id="result-success" hidden>Zysk: <span id="profit">100</span>zl Przez <span id="no-of-days">2</span> dni</p>
+            <p id="result-error" hidden>Kwota jest zbyt niska</p>
+            <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+            <!-- THESE LINES ARE FOR THE RESULTS OF CALCULATOR  -->
+
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<a href="https://github.com/Dudziej" class="link-to-page" target="_blank"
+  ><img src="MD.png" alt=""
+/></a>
+<script src="script.js"></script>
+<script src="data.json"></script>

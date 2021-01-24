@@ -1,0 +1,92 @@
+openapi: 3.0.0
+
+servers:
+  - url: https://localhost:8080
+    description: "Analiza akcji & wirtualny portfel"
+info:
+  description: "" 
+  version: "1.0.0"
+  title: "Analiza Akcji & Wirtualny portfel"
+  contact:
+    name: "Support"
+    email: s18496@pjwstk.edu.pl
+  license:
+    name: Creative Commons
+    url: "https://creativecommons.org/licenses/by/4.0/legalcode"
+paths:
+  /analiza_firmy:
+    get:
+      tags:
+        - analiza_firmy
+      summary: "Analiza akcji"
+      parameters:
+        - in: query
+          name: kod_firmy
+          schema:
+            type: string
+          required: true
+          description: "Firma od której pobieramy dane o akcjach"
+        - in: query
+          name: okres
+          schema:
+            type: string
+          description: "Okres akcji od - do"
+        - in: query
+          name: kategoria
+          schema:
+            type: string
+          description: "Kategoria wyświetlania danych firmy"
+      operationId: analiza_firmy
+      description: "Pobieranie danych firmy do wyswietlania" 
+      responses:
+        '200':
+          description: "A PDF file or a JSON object depending on the `output` query parameter"
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponseSuccess"
+        '401':
+          description: 'Failed to generate PDF'
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponseFailure"
+  /wirtualny_portfel:
+    get:
+      tags:
+        - wirtualny_portfel
+      summary: "Wirtualny portfel"
+      parameters:
+        - in: query
+          name: kwota
+          schema:
+            type: number
+          required: true
+          description: "Kwota do obliczeń"
+        - in: query
+          name: symbol_firmy
+          schema:
+            type: string
+          description: "Firma od której pobieramy dane"
+      description: "Pobieranie danych firmy do wyswietlania" 
+      responses:
+        '200':
+          description: "A PDF file or a JSON object depending on the `output` query parameter"
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponseSuccess"
+        '401':
+          description: 'Failed to generate PDF'
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponseFailure"

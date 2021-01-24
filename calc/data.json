@@ -1,0 +1,52 @@
+{
+    "AAPL":{
+        "symbol": "AAPL",
+        "up": 3.58,
+        "down": -1.78
+    },
+    "TSLA":{
+        "symbol": "TSLA",
+        "up": 7.84,
+        "down": -18.84
+    },
+    "BNGO":{
+        "symbol": "BNGO",
+        "up": 1.84,
+        "down": -5.90
+    },
+    "CCIV":{
+        "symbol": "CCIV",
+        "up": 1.00,
+        "down": -2.03
+    },
+    "AMC":{
+        "symbol": "AMC",
+        "up": 0.15,
+        "down": -3.99
+    },
+    "BB":{
+        "symbol": "BB",
+        "up": 0.73,
+        "down": -0.23
+    },
+    "OBSV":{
+        "symbol": "OBSV",
+        "up": 1.55,
+        "down": -0.42
+    },
+    "CHRA":{
+        "symbol": "CHRA",
+        "up": 1.14,
+        "down": -0.08
+    },
+    "DBVT":{
+        "symbol": "DBVT",
+        "up": 1.92,
+        "down": -0.03
+    },
+    "YTEN":{
+        "symbol": "YTEN",
+        "up": 5.96,
+        "down": -0.70
+    }
+}

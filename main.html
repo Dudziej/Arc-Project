@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arc-Main-Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="ahrefs.js"></script> 
+
+</head>
+<body>
+
+	<div class="section over-hide z-bigger">
+		<input class="checkbox" type="checkbox" name="general" id="general">
+		<label class="for-checkbox" for="general"></label>
+		<div class="background-color"></div>
+		<div class="section over-hide z-bigger">
+			<div class="container pb-5">
+				<div class="row justify-content-center pb-5">
+					
+					<div class="col-12 pt-1">
+                        <br>
+						<p style="font-size: 32px;" class="mb-4 pb-2">Arc Project</p><br>
+
+                            <p style="font-size: 24px;">1. Rentownosc Nieruchomosci</p><br>
+                            
+                            <p style="font-size: 24px;">2. Obligacje Skarbowe</p><br>
+
+                            <p style="font-size: 24px;">3. Akcje Firmowe</p><br>
+                        
+					</div>
+					<div class="col-8 pb-5">
+						<input class="checkbox-budget" type="radio" name="budget" id="budget-1" onclick="ahref1()">
+						<label class="for-checkbox-budget" for="budget-1">
+							<span data-hover="Rentownosc Nieruchomosci">Rentownosc Nieruchomosci</span>
+						</label><!--
+						--><input class="checkbox-budget" type="radio" name="budget" id="budget-2" onclick="ahref2()">
+						<label class="for-checkbox-budget" for="budget-2">							
+							<span data-hover="Obligacje Skarbowe">Obligacje Skarbowe</span>
+						</label><!--
+						--><input class="checkbox-budget" type="radio" name="budget" id="budget-3">
+						<label class="for-checkbox-budget" for="budget-3" onclick="ahref3()">							
+							<span data-hover="Akcje Firmowe">Akcje Firmowe</span>
+						</label>
+					</div>
+                    
+                    
+                    <div id="results" class="col-12 pt-1">
+    
+                    </div>
+
+
+				</div>
+			</div>	
+		</div>
+	</div>
+    
+    
+</body>
+</html>

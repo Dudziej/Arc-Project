@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arc-Obligacje</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="scripts.js"></script> 
+
+</head>
+<body>
+
+	<div class="section over-hide z-bigger">
+		<input class="checkbox" type="checkbox" name="general" id="general">
+		<label style="margin-top: 20px;" class="for-checkbox" for="general"></label>
+		<div class="background-color"></div>
+		<div class="section over-hide z-bigger">
+			<div class="container pb-5">
+				<div class="row justify-content-center pb-5">
+					
+					<div class="col-12 pt-1">
+                        <a href="#" onclick="close_window();return false;" class="btn btn-info" style="margin: 10px;margin-bottom: 150px;" role="button">Go Back</a>
+                        <br>
+                         <button onclick="show_hide()">Jak GUS oblicza obligacje.</button>
+
+                        <div style="display: none;" id="myDIV">
+                            <br>
+                            <p class="mb-4 pb-2"> GUS przedstawia swoją definicję inflacji. Ujmuje ona to zjawisko w ramach zmiany cen, a nie np. zmiany podaży pieniądza.</p><br>
+                           
+                            <p class="mb-4 pb-2">- Inﬂacja jest procesem zmian cen w całej gospodarce. Jest ona mierzona przez statystykę publiczną i prezentowana w formie wskaźników cen. Przez inﬂację rozumie się najczęściej średnie zmiany cen konsumpcyjnych towarów i usług nabywanych przez przeciętne gospodarstwo domowe.</p><br>
+                            
+                            <p class="mb-4 pb-2">Należy jednak zauważyć że inflacja mierzona statystycznie jest niższa od rzeczywistej.</p><br>
+                            
+                            <p class="mb-4 pb-2">Wiecej informacji na temat inflacji i jak GUS ją mierzy dotepne jest pod linkiem :</p><br>
+                            
+                            <p class="mb-4 pb-2">
+                                <a href="https://www.bankier.pl/wiadomosc/Jak-GUS-mierzy-inflacje-Statystycy-wyjasniaja-7790443.html">https://www.bankier.pl/wiadomosc/Jak-GUS-mierzy-inflacje-Statystycy-wyjasniaja-7790443.html</a>
+                            </p><br>
+
+                        </div>
+                        
+						<p style=" margin-top: 100px;font-size: 32px;" class="mb-4 pb-2">Obligacje Skarbowe</p>
+                        <form>
+                            <p style="font-size: 24px;">Kwota na zakup obligacji [1 obligacja - 100zl] :</p>
+                                <input type="number" id="finanse" name="Finanse" required><br><br>
+                            
+                            <p style="font-size: 24px;">Data kupna :</p>
+                                <input type="date" placeholder="dd-mm-yyyy" id="data1" name="Data1" required><br><br>
+                            
+                            <p style="font-size: 24px;">Data sprzedarzy :</p>
+                                <input type="date" placeholder="dd-mm-yyyy" id="data2" name="Data2" required><br><br>
+                        </form> 
+					</div>
+					<div class="col-8 pb-5">
+						<input class="checkbox-budget" type="radio" name="budget" id="budget-1" onclick="obl050()">
+						<label class="for-checkbox-budget" for="budget-1">
+							<span data-hover="0.50% Obligacje 3-mies OTS">0.50% Obligacje 3-mies OTS</span>
+						</label><!--
+						--><input class="checkbox-budget" type="radio" name="budget" id="budget-2" onclick="obl100()">
+						<label class="for-checkbox-budget" for="budget-2">							
+							<span data-hover="1.00% Obligacje 2-letnie DOS">1.00% Obligacje 2-letnie DOS</span>
+						</label><!--
+						--><input class="checkbox-budget" type="radio" name="budget" id="budget-3">
+						<label class="for-checkbox-budget" for="budget-3" onclick="obl110()">							
+							<span data-hover="1.10% Obligacje 3-letnie TOZ">1.10% Obligacje 3-letnie TOZ</span>
+						</label><!--
+						--><input class="checkbox-budget" type="radio" name="budget" id="budget-4">
+						<label class="for-checkbox-budget" for="budget-4" onclick="obl130()">							
+							<span data-hover="1.30% Obligacje 4-letnie COI">1.30% Obligacje 4-letnie COI</span>
+						</label><!--
+						--><input class="checkbox-budget" type="radio" name="budget" id="budget-5">
+						<label class="for-checkbox-budget" for="budget-5" onclick="obl170()">							
+							<span data-hover="1.70% Obligacje 10-letnie EDO">1.70% Obligacje 10-letnie EDO</span>
+						</label><!--
+						--><input class="checkbox-budget" type="radio" name="budget" id="budget-6">
+						<label class="for-checkbox-budget" for="budget-6" onclick="obl150()">							
+							<span data-hover="1.50% Obligacje Rodzinne 6-letnie ROS">1.50% Obligacje Rodzinne 6-letnie ROS</span>
+						</label><!--
+            --><input class="checkbox-budget" type="radio" name="budget" id="budget-7" onclick="obl200()">
+						<label class="for-checkbox-budget" for="budget-7">							
+							<span data-hover="2.00% Obligacje Rodzinne 12-letnie ROD">2.00% Obligacje Rodzinne 12-letnie ROD</span>
+						</label>
+					</div>
+                    
+                    
+                    <div id="results" class="col-12 pt-1">
+    
+                    </div>
+
+
+				</div>
+			</div>	
+		</div>
+	</div>
+    
+    
+</body>
+</html>
